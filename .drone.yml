@@ -1,9 +1,6 @@
-kind: pipeline
-name: default
-
-steps:
-- name: frontend
-  image: node
-  commands:
-  - npm ci
-  - npm run test:unit
+pipeline:
+  frontend:
+    image: node
+    commands:
+      - npm ci
+      - npm run test:unit
